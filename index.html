@@ -1,0 +1,431 @@
+<!-- This program is a personal webpage/CV that demonstrates the use of basic html tags/elements,
+modified using CSS class and id selectors (all defined in "index-style-sheet.css"). 
+
+The code has been formatted according to W3Schools' HTML Style Guide (2021***). -->
+
+
+<!-- Defaults to HTML5 (Hyperiondev, 2021, p.6). -->
+<!DOCTYPE html>
+
+<html>
+		
+<head>
+  <!-- Links to external style sheet (Hyperiondev, 2021, p.6). -->
+  <link href="index-style-sheet.css" type="text/css" rel="stylesheet">
+  <!-- Sets character encoding (special characters will display correctly)(W3schools.com, 2021). -->
+  <meta charset="UTF-8">
+  <!-- Sets page width to follow device screen-width (W3schools.com, 2021*). -->
+  <meta name="viewport" content="width=device-width">
+  <!-- Sets title for browser/search results/favorites. (Hyperiondev, 2021* p.7.) -->
+  <title>J-E-Foster</title>
+</head>
+
+<!-- 'class=...' refers to CSS-defined class attribute (Hyperiondev, 2021, p.5). -->
+<body class="wrapper"> 
+<!-- HEADER TOP (banner image) -->
+
+  <!-- 'id=...'' refers to CSS-defined id attribute (Hyperiondev, 2021, p.5). -->
+  <header id="headerTop">
+    <!-- 'srcset': image will resize on screens < 800px wide)(Developer.mozilla.org, 2021 & Wood, 2020). -->
+    <img srcset="images/lastbanner_long.jpg 5500w" 
+         sizes="(max-width: 800px) 2750px, 5500px" 
+         alt="Banner and profile pic" 
+         id="banner-image-headerTop">
+  </header>
+
+<!-- HEADER BOTTOM (banner image) -->
+
+  <header id="headerBottom">
+    <img srcset="images/lastbanner_long.jpg 5500w" 
+         sizes="(max-width: 800px) 2750px, 5500px"    
+         alt="Banner and profile pic" 
+         id="banner-image-headerBottom">
+    <p id="curve1-headerBottom"></p>
+  </header>
+
+<!-- ASIDE CONTACT (contact links - in line with headerBottom) -->
+
+  <aside id="asideContact">
+    <!-- Links images to external pages; 'target = "blank"' opens in new tab. (Hyperiondev, 2021*, p.11).
+
+    Note: a mailto link was used here for email. This is not good UX. Preferably, a UX-friendly and
+    secure email form should be created using PHP - see Carmicheal (2020). -->
+    <a href="mailto:anoxicdrollie@gmail.com" target="_blank">
+      <img srcset="images/mail.jpg 39w" 
+           sizes="(max-width: 800px) 19.5px, 39px" 
+           alt="Mail icon - links to default mail client" 
+           id="right-image-asideContact" 
+           class="button">
+    </a>
+    <a href="https://www.linkedin.com/in/j-e-foster/" target="_blank">
+      <img srcset="images/in.jpg 40w" 
+           sizes="(max-width: 800px) 21.5px, 40px" 
+           alt="Linkedin icon - links to Linkedin profile" 
+           id="mid-image-asideContact" 
+           class="button">
+    </a>
+    <a href="https://github.com/J-E-Foster?tab=repositories" target="_blank">
+      <img srcset="images/github.jpg 43w" 
+           sizes="(max-width: 800px) 20px, 43px" 
+           alt="Github icon - links to Github account" 
+           id="left-image-asideContact" 
+           class="button">
+    </a>
+  </aside>
+
+<!-- SECTION 1 (bio) -->
+
+  <section id="section1">
+    <div id="section-1-div">
+      <p id="vertical-line1-all-sections"></p>
+      <p id="title-section1-section3"><b>J.E. FOSTER - aspiring software developer</b></p>
+      <p id="vertical-line2-section1"></p>
+    </div>
+    <!-- This div (W3schools.com, 2021****) ensure's dot's position. -->
+    <div>
+      <p id="dot"></p>
+      <p id="body-section1">
+      My name is John Foster.<br><br>
+      I am a recent graduate, in the market for an intern/junior developer role.<br><br>
+      I have yet to gain real world experience, but have a strong foundational knowledge of Java, Python, and MySQL databases.<br><br>
+      I believe that analysis, creativity, and an eye for detail are my strong suits, as well as writing high quality code that can 
+      be picked up by other development resources with minimal handover.<br><br>
+      I am fascinated by the ways in which biological systems can connect-, interact with-, and be modelled by machines. 
+      This includes UX and the supporting data- and database structures at its foundation, deepening to the mapping of biological systems 
+      and the creation of self-reflexive machines that are able to learn and think - in theory leading to the direct communication and 
+      symbiotic evolution of man and machine.<br><br>
+      At the risk of sounding like every other graduates, I am hungry to learn, and to further explore and understand my strengths and weaknesses.<br><br>
+      Please see below for several personal projects, as well as a CV which, given my recent entry to the market, is light as a feather, 
+      but ready to add some serious weight.If you want to discuss projects, potential roles, or ruminate on the interaction of organic 
+      and abstract systems, please feel free to contact me using the links above.<br><br>
+      Thanks for stopping by!</p>
+      <p id="vertical-line4-section1"></p>
+      <p id="horizontal-line-section1"></p>
+      <p id="horizontal-line2-section1"></p>
+      <p id="vertical-line3-section1"></p>
+  </div>
+  </section>
+
+<!-- ASIDE 1 (languages and tools) -->
+
+  <aside id="aside1">
+    <p id="vertical-line1-aside1"></p>
+    <p id="horizontal-line-aside1"></p>
+    <p id="horizontal-line2-aside1"></p>
+    <p id="title-aside1"><b>LANGUAGES & TOOLS</b></p>
+    <p id="curve1-aside1"></p>
+    <p id="body-aside1"></p>
+    <!-- Unordered list (bulleted)(Hyperiondev, 2021*, p.17). -->
+    <ul id="body-aside1">
+      <!-- List item (one bullet each). -->
+      <li>Java</li>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>HTML</li>
+      <li>CSS</li>
+      <li>Git</li>
+      <li>JUnit</li>
+      <li>Scikit-learn</li>
+      <li>Matplotlib</li>
+    </ul>
+    <p id="curve2-aside1"></p>
+    <p id="curve3-aside1"></p>
+  </aside>
+
+<!-- SECTION 2 (projects) -->
+
+  <section id="section2">
+    <p id="vertical-line1-all-sections"></p>
+    <p id="title-section2"><b>PROJECTS</b></p>	
+    <p id="vertical-line2-section2-section3"></p>
+    <p id="body-section2"></p> 
+    <!-- Links text to external pages (Hyperiondev, 2021*, p.11). 
+    Note: the repositories are not yet public. -->
+    <ul id="list-body-section2">
+      <li>
+        <a href="https://github.com/J-E-Foster/Java-Project-Manager" target="_blank"><b>Java Project Manager</b></a><br>
+        <p id="list-paragraph-section2">This is a project management application for small/medium business that allows users 
+        to create, view, update, and finalize projects stored in an sql database.</p>
+      </li><br>
+      <li>
+        <a href="https://github.com/J-E-Foster/Python-Task-Manager" target="_blank"><b>Python Task Manager</b></a><br>
+        <p id="list-paragraph-section2">This is a task management application for small business. It allows users to assign, 
+        update, view, and finalize tasks stored in txt file</p>
+      </li><br>
+      <li>
+        <a href="https://github.com/J-E-Foster/Python-Investment-Calculator" target="_blank"><b>Python Investment Calculator</b></a><br>
+        <p id = "list-paragraph-section2">This is an investment and bond calculator. Users can calculate return on investment 
+        for or calculate their bond payments on a home loan.</p>
+      </li><br>
+      <li>
+        <a href="https://github.com/J-E-Foster/Megjalomondors-Revenje" target="_blank"><b>Megjalomondors Revenje</b></a><br>
+        <p id="list-paragraph-section2">This is a simple horizontal scrolling shoot-em-up game made using Pygame.</p>
+      </li>
+    </ul>
+    <p id="vertical-line3-section2"></p>
+  </section>
+
+<!-- ASIDE 2 (education) -->
+
+  <aside id="aside2">
+    <p id="vertical-line1-aside2"></p>
+    <p id="title-aside2"><b>EDUCATION</b></p>	
+    <p id="vertical-line2-aside2"></p>
+    <ul id="body-aside2">
+      <li>
+        <b>Software Engineering Bootcamp</b><br>
+        HyperionDev<br>
+        2021
+      </li><br>
+      <li>
+        <b>MA in Visual Art</b><br>
+        <!-- '<i>' used instead of '<em>' to denote foreign language, 
+        rather than emphasis (Aktmishra143, 2020). -->
+        <i>cum laude</i><br>
+        (Fine Art, Philosophy)<br>
+        Stellenbosch University<br>
+        2012
+      </li><br>
+      <li>
+        <b>BA in Visual Art</b><br>
+        <i>cum laude</i><br>
+        (Fine Art, Philosophy)<br>
+        Stellenbosch University<br>
+        2008
+      </li><br>
+      <li>
+        <b>Viticulture and Enology</b><br>
+        Stellenbosch University<br>
+        2002-2004
+      </li>
+      </ul>
+  </aside>
+
+<!-- SECTION 3 (work experience) -->
+
+  <section id="section3">
+    <p id="vertical-line1-all-sections"></p>
+    <p id="title-section1-section3"><b>WORK EXPERIENCE</b></p>
+    <p id="curve1-section3"></p>
+    <p id="curve2-section3"></p>
+    <!-- This div acts as visible rounded-corner border for table. 
+    The table's border collapse = collapse (see CSS), 
+    so border radius does not work correctly (FelipeAls, 2012). -->
+    <div id="div-table-border-section3">
+      <!-- Table (Hyperiondev, 2021, p.8-9 & 2021**). --> 
+      <table id="content-section3">
+        <!-- Table row. -->
+        <tr>
+          <!-- Table column. -->
+          <td id="table-data-left-section3">
+            <p id="vertical-line-mid-section3"></p>
+            <!-- '&nbsp' denotes non-breaking white space (W3schools.com, 2021**). --> 
+            <p id="table-paragraph-section3">Sep 2020<br>-<br>present&nbsp</p>
+            <p id="vertical-line-mid-section3"></p>
+          </td>
+          <td id="table-data-right-top-section3">
+            <p id="table-paragraph-section3">
+              <b>First Future</b><br>
+              <!-- '<em>' used instead of '<i>' to denote (visual) emphasis (Aktmishra143, 2020). -->
+              <em>Educator</em>
+            </p>
+            <ul id="content-section3">
+              <li id="list-items-section3">Teaches English Second Language to Chinese students aged 5 to 17 via web-based application</li>
+              <li id="list-items-section3">Assesses and places new students</li>
+              <li id="list-items-section3">Represents the school in trial/demo classes for prospective students</li>
+              <li id="list-items-section3">Achieved 100% student satisfaction rating for every month since employment</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td id="table-data-left-section3">
+            <p id="vertical-line-very-short-section3"></p>
+            <p id="table-paragraph-section3-no-top-margin">Mar 2012<br>-<br>present</p>
+            <p id="vertical-line-very-short-section3"></p>
+          </td>
+          <td  id="table-data-right-section3">
+            <p id="table-paragraph-section3">
+              <b>Visual Artist & Illustrator</b><br>
+              <em>Freelance</em>
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td id="table-data-left-section3">
+            <p id="vertical-line-mid-section3"></p>
+            <p id="table-paragraph-section3-no-top-margin">Feb 2017<br>-<br> Sep 2020</p>
+            <p id="vertical-line-mid-section3"></p>
+          </td>
+          <td id="table-data-right-section3">
+            <p id="table-paragraph-section3">
+              <b>iusEnglish International Education</b><br>
+              <em>Educator</em>
+            </p>
+            <ul id="content-section3">
+              <li id="list-items-section3">Taught ESL to Chinese students aged 5 to 17 via web-based application</li>
+              <li id="list-items-section3">Assessed and placed new students</li>
+              <li id="list-items-section3">Represented the school in trial/demo classes for prospective students</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td id="table-data-left-section3">
+            <p id="vertical-line-short-section3"></p>
+            <p id="table-paragraph-section3-no-top-margin">Sep 2015<br>-<br>Sep 2016</p>
+            <p id="vertical-line-short-section3"></p>
+          </td>
+          <td id="table-data-right-section3">
+            <p id="table-paragraph-section3">
+              <b>HESS International Education Group, Taiwan</b><br>
+              <em>Educator</em>
+            </p>
+            <ul id="content-section3">
+              <li id="list-items-section3">Taught ESL to Taiwanese students aged 5 to 16</li>
+              <li id="list-items-section3">Assisted with PR functions including liaison with parents</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td id="table-data-left-section3">
+            <p id="vertical-line-short-section3"></p>
+            <p id="table-paragraph-section3-no-top-margin">Aug 2013<br>-<br>Oct 2014</p>
+            <p id="vertical-line-short-section3"></p>
+          </td>
+          <td id="table-data-right-section3">
+            <p id="table-paragraph-section3">
+              <b>Performance Art Workshop, Stellenbosch University</b><br>
+              <em>Guest Lecturer - 2nd Year Fine Art</em>
+            </p>
+            <ul id="content-section3">
+              <li id="list-items-section3">Conceptualized and lead annual Performance Art Workshop</li>
+              <li id="list-items-section3">Served on final examination panel</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td id="table-data-left-section3">
+            <p id="vertical-line-short-section3"></p>
+            <p id="table-paragraph-section3-no-top-margin">Feb 2012<br>-<br>Jun 2014</p>
+            <p id="vertical-line-short-section3"></p>
+          </td>
+          <td id="table-data-right-section3">
+            <p id="table-paragraph-section3">
+              <b>The Book Workshop, Stellenbosch University</b><br>
+              <em>Digital Printing Assistant</em>
+            </p>
+            <ul id="content-section3">
+              <li id = "list-items-section3">Managed digital prints on large-format printers 
+                (incl. book printing, file processing, and printer maintenance)</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td id="table-data-left-section3">
+            <p id="vertical-line-short-section3"></p>
+            <p id="table-paragraph-section3-no-top-margin">Jun 2013<br>-<br>Sep 2013</p>
+            <p id="vertical-line-short-section3"></p>
+          </td>
+          <td id="table-data-right-section3">
+            <p id="table-paragraph-section3">
+              <b>Special Needs Tutor, Stellenbosch University</b><br>
+              <em>Special Needs Tutor - 2nd Year Visual Studies, Philosophy of Culture module</em>
+            </p>
+            <ul id="content-section3">
+              <li id="list-items-section3">Ensured the student complete the course successfully via intensive one-on-one sessions</li>
+              <li id="list-items-section3">Achieved a 30% increase in the student's final marks</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td id="table-data-left-section3">
+            <p id="vertical-line-short-section3"></p>
+            <p id="table-paragraph-section3-no-top-margin"><br>Aug 2013<br><br></p>
+            <p id="vertical-line-short-section3"></p>
+          </td>
+          <td id="table-data-right-section3">
+            <p id="table-paragraph-section3">
+              <b>Rethinking Connectivity, Stellenbosch University</b><br>
+              <em>Guest Lecturer -  4th Year Theory of Art, Connectivity module</em>
+            </p>
+            <ul id="content-section3">
+              <li id = "list-items-section3">Conceptualized and presented a lecture on Deleuze & Guattari's realist ontology</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td id="table-data-left-section3">
+            <p id="vertical-line-short-section3"></p>
+            <p id="table-paragraph-section3-no-top-margin">Feb 2009<br>-<br>Jun 2013</p>
+            <p id="vertical-line-short-section3"></p>
+          </td>
+          <td id="table-data-right-section3">
+            <p id="table-paragraph-section3">
+              <b>GUS Gallery</b><br>
+              <em>Art Gallery Assistant</em>
+            </p>
+            <ul id="content-section3">
+              <li id = "list-items-section3">Curated, set up, and managed exhibitions</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td id="table-data-left-section3">
+            <p id="vertical-line-short-section3"></p>
+            <p id="table-paragraph-section3-no-top-margin">Feb 2009<br>-<br>Dec 2012</p>
+            <p id="vertical-line-short-section3"></p>
+          </td>
+          <td id="table-data-right-section3">
+            <p id="table-paragraph-section3">
+              <b>Department of Visual Arts, Stellenbosch University</b><br>
+              <em>General Student Assistant and Tutor - 1st to 4th Year Fine Art, Visual Studies, 
+              Theory of Art, and Philosophy</em>
+            </p>
+            <ul id = "content-section3">
+              <li id="list-items-section3">Lead group tutorials</li>
+              <li id="list-items-section3">Tutored students one-on-one</li>
+              <li id="list-items-section3">Set up and evaluated tests and written assignments</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p id="vertical-line-curve3-section3"></p>
+    <p id="curve-curve3-section3"></p>
+    <p id="bottom_box_section3"></p>
+  </section>
+
+<!-- FOOTER -->
+
+  <footer id="footer">
+    <p id="footer-left">© J.E. Foster 2021</p>
+    <!-- Links back to header (Hyperiondev, 2021*, p.17). -->
+    <p id="footer-right"><a href="#headerTop" id="footer">Back to top</a></p>
+  </footer>
+</body>
+
+</html>
+
+
+
+
+<!------------------------------------------------ THE END --------------------------------------------------------
+
+References:
+
+Aktmishra143 (2020). Difference between <i> and <em> tag of HTML. [online] Geeksforgeeks.org. Available at: https://www.geeksforgeeks.org/difference-between-i-and-em-tag-of-html/ [Accessed 18 Sep 2021].
+Carmicheal, K. (2020). How to Create an HTML Form That Sends You an Email. [online] Blog.hubspot.com. Available at: https://blog.hubspot.com/ [Accessed 20 Sep 2021].
+Developer.mozilla.org (2021). MDN Web Docs, Responsive images. [online] Available at: https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images [Accessed 18 Sep 2021].
+FelipeAls (2012). Border Radius of Table is not working. [online] Stackoverflow.com. Available at: https://stackoverflow.com/questions/10666573/border-radius-of-table-is-not-working [Accessed 30 Sep 2021].
+Hyperiondev, (2021). CSS Overview. p.3-11.
+Hyperiondev (2021)*. HTML Overview. p.3-16.
+Hyperiondev (2021)**. example2.html, Software Engineering Bootcamp, Level 3, Task 16.
+W3schools.com (2021). HTML <meta> charset Attribute. [online] [online] Available at: https://www.w3schools.com/tags/att_meta_charset.asp [Accessed 18 Sep 2021].
+W3schools.com (2021)*. Responsive Web Design - The Viewport. [online] Available at: https://www.w3schools.com/css/css_rwd_viewport.asp [Accessed 18 Sep 2021].
+W3schools.com (2021)**. HTML Entities. [online] Available at: https://www.w3schools.com/html/html_entities.asp [Accessed 20 Sep 2021].
+W3schools.com (2021)***. HTML Style Guide and Coding Conventions [online] Available at: https://www.w3schools.com/html/html5_syntax.asp [Accessed 30 Sep 2021].
+W3schools.com (2021)****. HTML <div> Tag [online] Available at: https://www.w3schools.com/tags/tag_div.ASP [Accessed 01 Oct 2021].
+Wood, A. (2020). What Img Srcset Does In HTML5: A Quick & Simple Guide. [online] Available at: https://html.com/attributes/img-srcset/ [Accessed 18 Sep 2021].
+
+
+
+  ---------------------------------------------------------------------------------------------------------------->

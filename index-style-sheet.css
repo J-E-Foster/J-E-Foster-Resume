@@ -1,0 +1,1004 @@
+/* This is the CSS style sheet for "index.html". 
+Rules are grouped together per grid area. */
+
+
+/* Sets character encoding (special characters will display correctly)(W3schools, 2021*). */
+@charset "UTF-8";
+
+
+/* GRID LAYOUT */
+
+/* Wrapper container enables different grid-layout responses to 
+different screen sizes (Delise, 2020). */
+
+/* For screen widths larger than 887px. */
+.wrapper {
+  display: grid;
+  /* Displays 80% of screen width. */
+  width: 80%;
+  /* Centres display - sets L/R margins equal
+  (margin = space around border outside)(W3schools, 2021*). */
+  margin: auto;
+  /* Sets 3 columns of equal space fractions ('1fr'). */
+  grid-template-columns: repeat(3, 1fr);
+  /* Sets row sizing. 'auto' adjusts to content (MDN, 2021). */
+  grid-auto-rows: 190.78px 52.48px 660px auto auto auto 79.71px;
+  /* Sets rows and columns according to grid areas. */
+  grid-template-areas: 
+    "headerTop headerTop headerTop"
+    "headerBottom headerBottom asideContact"
+    "section1 section1 aside1"
+    "section1 section1 aside2"
+    "section2 section2 aside2"
+    "section3 section3 section3"
+    "footer footer footer"; 
+}
+
+/* For screen widths smaller than 878px (Delise, 2020). */
+@media only screen and (max-width: 877px) {
+  .wrapper {
+    width: 98%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 95.08px 23.05px auto 660px auto auto auto 64.3px;
+    grid-template-areas:
+      "headerTop headerTop"
+      "headerBottom asideContact"
+      "section1 section1"
+      "aside1 aside1"
+      "aside2 aside2"
+      "section2 section2"
+      "section3 section3"
+      "footer footer";
+  } 
+}
+
+/* For screen widths smaller than 512px. */
+@media only screen and (max-width: 511px) {
+  .wrapper {
+    width: 100%;
+  }	
+}
+
+/* GRID AREAS */
+
+/* Contains banner image. */
+#headerTop {
+  grid-area: headerTop;
+  /* Sets container position relative to default, 
+  but still within doc flow (Zhang, 2017 & W3schools, 2021**).
+  This "sizes" the container, so any absolute element 
+  positioned within it will use it as totality. */
+  position: relative;
+  /* Rounds border corners (W3schools, 2021***). */
+  border-radius: 7px;
+  /* Stops content/pics going over border (W3schools, 2021*v). */
+  overflow: hidden;
+}
+
+/* Contains banner image (in line with asideContact). */
+#headerBottom {
+  grid-area: headerBottom;
+  position: relative;
+  border: 0.5px solid;
+  border-right: 0px;
+  overflow: hidden;
+}
+
+/* Contains bio. */
+#section1 {
+  grid-area: section1;
+  position: relative;
+  overflow: hidden; 
+}
+
+/* Contains projects. */
+#section2 {
+  grid-area: section2;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Contains work experience. */
+#section3 {	
+  grid-area: section3;
+  position: relative;
+  overflow: hidden; 
+}
+
+/* Contains contact links. */
+#asideContact {
+  grid-area: asideContact;
+  position: relative;
+  border: 0.5px solid;
+  border-left: 0px;
+  overflow: hidden; 
+}
+
+/* Contains languages and tools. */
+#aside1 {
+  grid-area: aside1;
+  position: relative;
+  overflow: hidden; 
+}
+
+/* Contains education. */
+#aside2 {
+  grid-area: aside2;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Contains page details & link to top */
+#footer {
+  grid-area: footer;
+  position: relative;
+  border: 1px solid;
+  border-radius: 7px;
+  /* For colors, see W3schools (2021v). */
+  background-color: #181818;
+
+}
+
+
+/* HEADER TOP */
+
+img#banner-image-headerTop {
+  /* 'absolute' takes container/element out of document flow 
+  (Zhang, 2017 & W3schools, 2021**). 
+  Position is absolute relative to last sized element/container. */
+  position: absolute;
+  border-radius: 7px; 
+}
+
+/* HEADER BOTTOM */
+
+img#banner-image-headerBottom {
+  position: absolute;
+  left: -0.5px;
+  bottom: -7px;
+}
+
+@media only screen and (max-width: 877px) {
+  p#curve1-headerBottom {
+    position: absolute;
+    top: 40%;
+    left: 79.5px;
+    width: 25px;
+    height: 25px;
+    margin: 0px;
+    border-top: 5px solid;
+    border-right: 5px solid;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 5px;
+    border-color: #212b31;
+  }
+}
+
+
+/* ASIDE CONTACT */
+
+/* Image right */
+img#right-image-asideContact {
+  /* 'absolute' enables easier horizontal positioning 
+  (as it's out of doc/image flow). */
+  position: absolute;
+  top: 5px;
+  right:30px;
+}
+
+@media only screen and (max-width: 877px) {
+  img#right-image-asideContact {
+    top: 1.5px;
+    right:20px;
+  }
+}	
+
+/* Image mid */
+img#mid-image-asideContact {
+  position: absolute;
+  top: 5px;
+  right: 83px;
+  border-radius: 3px;
+}
+
+@media only screen and (max-width: 877px) {
+  img#mid-image-asideContact {
+    top: 0px;
+    right: 53px;
+  }
+}
+
+/* Image left */
+img#left-image-asideContact {
+  position: absolute;
+  top: 5px;
+  right: 137px;
+}
+
+@media only screen and (max-width: 877px) {
+  img#left-image-asideContact {
+    top: 1.5px;
+    right: 90px;
+  }
+}
+
+
+/* SECTION 1 */
+
+/* -Head- */
+
+p#vertical-line1-all-sections {
+  position: relative;
+  left: 100px;
+  height: 23px;
+  margin: 0px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+p#title-section1-section3 {
+  position: relative;
+  left: 5px;
+  margin-top: 5px;
+  margin-bottom:  10px;
+  font-family: "Courier New";
+  font-size: 20px;
+}
+
+p#vertical-line2-section1 {
+  position: relative;
+  left: 100px;
+  height: 23px;
+  margin: 0px;
+  border-left: 5px solid; 
+  border-color: #212b31;
+}
+
+/* -Body- */
+
+/* --Text-- */
+
+p#body-section1 {
+  position: relative;
+  width: 90%;
+  margin: 0px;
+  /* Padding = space along border inside (W3schools, 2021v*). */
+  padding: 12px;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border: 3px solid;
+  border-color: #212b31;
+  border-radius: 15px;
+  /* For web-safe fonts, see W3schools (2021v**). */
+  font-family: "Courier New";
+  /* Default font size = 16px (MDN, 2021*). */
+  font-size: 19px;
+}
+
+@media only screen and (max-width: 877px) {
+  p#body-section1 {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
+
+/* --Aesthetics (lines/dots)-- */
+
+/* Bottom vertical line. */
+/* This is for biggest screen sizes (> 3072 px) 
+(so the line doesn't break). */
+p#vertical-line3-section1 { 
+  position: relative;
+  left: 100px;
+  height: 260px;
+  margin: 0px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+/* This is for normal screen sizes. */
+@media only screen and (max-width: 3072px) {
+  p#vertical-line3-section1 {
+    height: 70px;
+  }
+}
+
+p#dot {
+  position: absolute;
+  left: 90%;
+  height: 5px;
+  margin: 0px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+@media only screen and (max-width: 877px) {
+  p#dot {
+    left: auto;
+    right: 10px;
+    margin-top: 9px;
+  }
+}
+
+/* Runs through horizontal line. */
+p#vertical-line4-section1 {
+  position: absolute;
+  top: 436px;
+  left: 92%;
+  height: 39px;
+  margin: 0px;
+  border-left: 5px solid;
+  border-color: #212b31;
+} 
+
+@media only screen and (max-width: 877px) {
+  p#vertical-line4-section1 {
+    border: 0px;
+  }
+}
+
+p#horizontal-line-section1 {
+  position: absolute;
+  top: 438px;
+  right: 0px;
+  bottom: 0px;
+  width: 10%;
+  border-top: 5px solid;
+  border-color: #212b31;
+}
+
+@media only screen and (max-width: 877px) {
+  p#horizontal-line-section1 {
+    border: 0px;
+  }
+}
+
+p#horizontal-line2-section1 {
+  position: absolute;
+  top: 470px;
+  right: 0px;
+  bottom: 0px;
+  width: 10%;
+  border-top: 5px solid;
+  border-color: #212b31;
+}
+
+@media only screen and (max-width: 877px) {
+  p#horizontal-line2-section1 {
+    border: 0px;
+  }
+}
+
+
+/* SECTION 2*/
+
+/* -Head- */
+
+p#title-section2 {
+  position: relative;
+  left: 60px;
+  margin-top: 7px;
+  margin-bottom: 0px;
+  font-family: "Courier New";
+  font-size: 20px;
+}
+
+p#vertical-line2-section2-section3 {
+  position: relative;
+  left: 100px;
+  height: 40px;
+  margin: 0px;
+  padding: 0px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+/* -Body- */
+
+/* --Text-- */
+
+ul#list-body-section2 {
+  position: relative;
+  left: 71px;
+  width: 80%;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-right: 35px;
+  border: 3px solid;
+  border-color: #212b31;
+  border-radius: 15px;
+  font-family: "Courier New";
+  font-size: 19px;
+}
+
+@media only screen and (max-width: 877px) {
+  ul#list-body-section2 {  
+    left: 2%;
+    width: 97%;
+    margin-bottom: 0px;
+  }
+}
+
+p#list-paragraph-section2 {
+  margin: 0px;
+  padding-top:7px;
+  padding-bottom: 7px;
+}
+
+/* --Aesthetics-- */
+
+/* This is the double left border. */
+p#body-section2 { 
+  position: absolute;
+  top: 74px;
+  left: 78px;
+  bottom: 43px;
+  width: 8%;
+  margin-bottom: 0px;
+  padding: 7px;
+  padding-right: 35px;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+  border-color: #212b31;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  font-family: "Courier New";
+  font-size: 19px;
+}
+
+@media only screen and (max-width: 877px) {
+  p#body-section2 {
+    left: 3.5%;
+    bottom: 33px;
+  }
+}
+
+p#vertical-line3-section2 {
+  position: relative;
+  left: 100px;
+  height: 46px;
+  margin: 0px;
+  margin-top: 7px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+@media only screen and (max-width: 877px) {
+  p#vertical-line3-section2 {
+    margin-top: 0px;
+  }
+}
+
+  
+/*SECTION 3*/
+
+/* -Head- */
+
+/* Vertical curve. */
+p#curve1-section3 {
+  position: relative;
+  left: 25px;
+  width: 30px;
+  height: 68px;
+  margin: 0px;
+  border-top: 5px solid;
+  border-left: 5px solid;
+  border-top-left-radius: 15px;
+  border-color: #212b31;
+}
+
+/* Horizontal curve. */
+p#curve2-section3 {
+  position: absolute;
+  top: 78px;
+  left: 40px;
+  width: 65px;
+  height: 20px;
+  margin: 0px;
+  border-bottom: 5px solid;
+  border-right: 5px solid;
+  border-bottom-right-radius: 15px;
+  border-color: #212b31;
+}
+
+/* -Body- */
+
+/* This div acts as visible rounded-corner border for table: 
+The table's border collapse = collapse (see below), 
+so border radius does not work correctly (FelipeAls, 2012). */
+div#div-table-border-section3 {
+  width: 80%;
+  border: 3px solid;
+  border-radius: 15px;
+  border-color: #212b31;
+}
+
+@media only screen and (max-width: 877px) {
+  div#div-table-border-section3 {
+    width: 100%;
+  }
+}
+
+/* --Text-- */
+
+table#content-section3 {
+  position: relative;
+  width: 100%;
+  padding: 0px;
+  border-collapse: collapse;
+  font-family: "Courier New";
+  font-size: 19px;
+}
+
+/* Describes dates column. */
+td#table-data-left-section3 {
+  border: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 3px;
+  padding-right: 5px;
+}
+
+/* Describes jobs column. */
+td#table-data-right-section3 {
+  border: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 50px;
+}
+
+/* First job - extra padding. */
+td#table-data-right-top-section3 {
+  border: 0px;
+  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-left: 0px;
+  padding-right: 50px;
+}
+
+/* Sets bullet list as a whole. */
+ul#content-section3 {
+  top: 11%;
+  left: 0px;
+  overflow: hidden;
+  margin-top: 0px;
+  padding-left: 15px;
+}
+
+/* Sets each bulleted item. */
+li#list-items-section3 {
+  margin-bottom: 0px;
+  margin-left: 7px;
+  padding: 0px;
+  padding-top: 6px;
+  padding-bottom: 0px;
+  border: 0px;
+  font-size: 17px;
+}
+
+/* Job titles paragraph & irst date paragraph. */
+p#table-paragraph-section3 {
+  padding: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 0px;
+  margin-bottom: 0px;
+  border: 1px solid;
+}
+
+/* Date paragraphs. */
+p#table-paragraph-section3-no-top-margin {
+  padding: 2px;
+  margin: 0px;
+  border: 1px solid;
+  font-size: 18px;
+}
+
+/* --Aesthetics-- */
+
+/* Next three lines define "spine" in table left. */
+
+p#vertical-line-very-short-section3 {
+  position: relative;
+  left: 19px;
+  height: 15px;
+  margin: 0px;
+  padding: 0px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+p#vertical-line-short-section3 {
+  position: relative;
+  left: 19px;
+  height: 43px;
+  margin: 0px;
+  padding: 0px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+p#vertical-line-mid-section3 {
+  position: relative;
+  left: 19px;
+  height: 70px;
+  margin: 0px;
+  padding: 0px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+/* Last line and curve (bottom "hook"). */
+
+p#vertical-line-curve3-section3 {
+  position: relative;
+  left: 25px;
+  margin: 0px;
+  height: 150px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+p#curve-curve3-section3 {
+  position: relative;
+  left: 25px;
+  width: 30px;
+  height: 20px;
+  margin: 0px;
+  margin-bottom: 10px;
+  border-left: 5px solid;
+  border-bottom: 5px solid;
+  border-bottom-left-radius: 15px;
+  border-color: #212b31;
+}
+
+/* Thin-border box at bottom. */
+p#bottom_box_section3 {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  bottom: 0px;
+  margin: 0px;
+  border: 0.5px solid;
+  border-color: #212b31;
+}
+
+
+/* ASIDE 1 */
+
+/* -Head- */
+
+p#title-aside1 {
+  position: absolute;
+  top: 60px;
+  left: 30%;
+  font-family: "Courier New";
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 877px) {
+  p#title-aside1 {
+    top: 40px;
+    left: 10%;
+    margin: 0px;
+  }
+}
+
+@media only screen and (max-width: 877px) {
+  p#vertical-line1-aside1 {
+    position: absolute;
+    left: 100px;
+    height: 40px;
+    margin: 0px;
+    border-left: 5px solid;
+    border-color: #212b31;
+  }
+}
+
+/* Inserts right-angle curve below title on screens < 878px. */
+@media only screen and (max-width: 877px) {
+  p#curve1-aside1 {
+    position: absolute;
+    top: 70px;
+    left: 100px;
+    right: 75%;
+    height: 85px;
+    margin: 0px;
+    border-left: 5px solid;
+    border-bottom: 5px solid;
+    border-color: #212b31;
+    border-bottom-left-radius: 15px;
+  }
+}
+
+/* -Body- */
+
+/* --Text-- */
+
+ul#body-aside1 {
+  position: absolute;
+  top: 105px;
+  left: 25%;
+  height: 450px;
+  padding-top: 20px;
+  padding-right: 100px;
+  border: 3px solid;
+  border-color: #212b31;
+  border-radius: 15px;
+  font-family: "Courier New";
+  font-size: 19px;
+}
+
+/* --Aesthetics-- */
+
+/* This is the downwards shifted border. */
+p#body-aside1 {
+  position: absolute;
+  top: 120px;
+  left: 25%;
+  height: 460px;
+  width: 10%;
+  padding-top: 5px;
+  padding-right: 35px;
+  border-top: 3px solid;
+  border-bottom: 3px solid;
+  border-left: 3px solid;
+  border-color: #212b31;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+p#horizontal-line-aside1 {
+  position: absolute;
+  top: 438px;
+  left: 0px;
+  width: 25%;
+  border-top: 5px solid;
+  border-color: #212b31;
+}
+
+p#horizontal-line2-aside1 {
+  position: absolute;
+  top: 470px;
+  left: 0px;
+  width: 25%;
+  border-top: 5px solid;
+  border-color: #212b31;
+}
+
+/* Curve inside list box. */
+p#curve2-aside1 {
+  position: absolute;
+  top: 470px;
+  left: 29%;
+  height: 73px;
+  width: 8%;
+  border-top: 5px solid;
+  border-right: 5px solid;
+  border-bottom: 5px solid;
+  border-color: #212b31;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* Bottom curve. */
+p#curve3-aside1 {
+  position: absolute;
+  top: 538px;
+  left: 20%;
+  width: 5%;
+  height: 100px;
+  border-top: 5px solid;
+  border-left: 5px solid;
+  border-color: #212b31;
+  border-top-left-radius: 15px;
+}
+
+
+/* ASIDE 2 */
+
+/* -Head- */
+
+p#vertical-line1-aside2 {
+  position: relative;
+  left: 20%;
+  height: 23px;
+  margin: 0px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+p#title-aside2 {
+  position: relative;
+  top: 8px;
+  left: 15%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Courier New";
+  font-size: 20px;
+}
+
+p#vertical-line2-aside2 {
+  position: relative;
+  left: 20%;
+  height: 30px;
+  margin: 0px;
+  margin-top: 10px;
+  border-left: 5px solid;
+  border-color: #212b31;
+}
+
+/* -Body- */
+
+/* --Text-- */
+
+ul#body-aside2 {
+  position: relative;
+  left: 30px;
+  width: 90%;
+  margin: 0px;
+  padding-top: 20px;
+  padding-bottom: 100px;
+  padding-left: 40px;
+  padding-right: 15px;
+  border: 3px solid;
+  border-radius: 15px;
+  border-color: #212b31;
+  font-family: "Courier New";
+  font-size: 19px;
+}
+
+/* Shifts entire list left on screens < 1229px. */
+@media only screen and (max-width: 1228px) {
+  ul#body-aside2 {
+    left: 20px;
+  }
+}
+
+/* --Aesthetics-- */
+
+@media only screen and (max-width: 877px) {
+  p#vertical-line3-aside2 {
+    position: relative;
+    left: 100px;
+    margin: 0px;
+    border-left: 5px solid;
+    border-color: #212b31;
+  }
+}
+
+	
+/* FOOTER */
+
+/* Site info */
+p#footer-left {
+  position: absolute;
+  left: 20px;
+  color: #FFFFF0;
+  font-family: "Courier New"; 
+}
+
+@media only screen and (max-width: 877px) {
+  p#footer-left {
+    font-size: 14px;
+  }
+}
+
+/* Back to top */
+p#footer-right {
+  position: absolute;
+  right: 20px;
+  font-family: "Courier New";
+}
+
+@media only screen and (max-width: 877px) {
+  p#footer-right {
+    font-size: 15px;
+  }
+}
+
+/* Links font color. */
+a#footer {
+  color: #FFFFF0;
+}
+
+
+/* GLOBAL */
+
+/* -All- */
+
+/* Makes container size include its padding (W3schools, 2021v***). */
+* {
+  box-sizing: border-box;
+}
+
+/* -Links- */
+
+a {
+  color: #000000;
+}
+
+/* -Button- */
+
+/* Sets behavior on hover (any button-class image)(Hyperiondev, 2021, p.5). */
+img.button:hover {
+  /* Sets delay on hover behaviour (Sirv.com, 2021). */
+  transition-duration: 0.4s;
+  /* Turns button transparent (Sirv.com, 2021). */
+  opacity: 0;
+}
+
+
+/* -Table data- */
+
+td {
+  margin: 0px;
+  padding: 0px;  
+  border: 1px solid;
+}
+
+/* -List items- */
+
+li {
+  margin: 0px;
+  padding: 5px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border: 1px solid;
+}
+	
+/* -Scrollbar- (MDN, 2021** & W3schhools, 2021vx) */
+
+/* General */
+::-webkit-scrollbar {
+  width: 0.5vw;
+  cursor: pointer;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  height: 80%;
+  border: 0.5px solid;
+  border-radius: 15px;
+  background: white;
+}
+
+/* Changes handle color on hover. */
+::-webkit-scrollbar-thumb:hover {
+  background: #181818;
+}
+
+
+
+/***************************************************** THE END ***************************************************************
+
+References:
+
+Delise, A. (2020). Responsive CSS Grid Tutorial. [video] Youtube.com. Available at: https://www.youtube.com/watch?v=68O6eOGAGqA&ab_channel=AngelaDelise [Accessed 4 Oct 2021].
+FelipeAls (2012). Border Radius of Table is not working. [online] Stackoverflow.com. Available at: https://stackoverflow.com/questions/10666573/border-radius-of-table-is-not-working [Accessed 30 Sep 2021].
+Hyperiondev, (2021). CSS Overview. p.3-11.
+MDN (2021). grid-auto-rows, MDN Web Docs. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-auto-rows [Accessed 4 Oct 2021].
+MDN (2021)*. font-size, MDN Web Docs. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/font-size [Accessed 4 Oct 2021].
+MDN (2021)**. ::-webkit-scrollbar, MDN Web Docs. [online] Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar [Accessed 4 Oct 2021].
+Sirv.com (2021). Change image on hover. [online] Available at: https://sirv.com/help/articles/hover-change-image/ [Accessed 4 Oct 2021].
+W3schools. (2021). CSS @charset Rule. [online] Available at: https: https://www.w3schools.com/cssref/pr_charset_rule.asp [Accessed 4 Oct 2021].
+W3schools (2021)*. CSS Margins. [online] Available at: https://www.w3schools.com/css/css_margin.asp [Accessed 4 Oct 2021].
+W3schools (2021)**. CSS Layout - The position Property. [online] Available at: https://www.w3schools.com/css/css_positioning.asp [Accessed 4 Oct 2021].
+W3schools (2021)***. CSS Rounded Corners. [online] Available at: https://www.w3schools.com/css/css3_borders.asp [Accessed 4 Oct 2021].
+W3schools (2021)*v. CSS overflow Property. [online] Available at: https://www.w3schools.com/cssref/pr_pos_overflow.asp [Accessed 4 Oct 2021].
+W3schools (2021)v. CSS Colors. [online] Available at: https://www.w3schools.com/cssref/css_colors.asp [Accessed 4 Oct 2021].
+W3schools (2021)v*. CSS Padding. [online] Available at: https://www.w3schools.com/css/css_padding.asp [Accessed 4 Oct 2021].
+W3schools (2021)v**. CSS Web Safe Fonts [online] Available at: https://www.w3schools.com/cssref/css_websafe_fonts.asp [Accessed 4 Oct 2021].
+W3schools (2021)v***. CSS Box Sizing. [online] Available at: https://www.w3schools.com/css/css3_box-sizing.asp [Accessed 4 Oct 2021].
+W3schhools (2021)vx. How TO - Custom Scrollbar. [online] Available at: https://www.w3schools.com/howto/howto_css_custom_scrollbar.asp [Accessed 4 Oct 2021].
+Zhang, L. (2017). Difference between css position absolute versus relative. [online] Medium.com. Available at: https://leannezhang.medium.com/difference-between-css-position-absolute-versus-relative-35f064384c6 [Accessed 4 Oct 2021].
+
+
+
+******************************************************************************************************************************/
